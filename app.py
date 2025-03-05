@@ -7,6 +7,7 @@ def calculate_bmi(weight, feet, inches):
     bmi = (weight * 2.20462 * 703) / (height_in_inches ** 2)
     return round(bmi, 2)
 
+
 def get_bmi_category(bmi):
     if bmi < 18.5:
         return "underweight"

@@ -32,6 +32,7 @@ function calculateBMI() {
     });
 }
 
+
 function clearAll() {
     document.getElementById("name").value = "";
     document.getElementById("weight").value = "";
