@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+</head>
+<body><!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BMI Calculator</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <h2>BMI Calculator</h2>
+            <input type="text" id="name" placeholder="Enter your name"><br />
+            <input type="number" id="weight" placeholder="Enter your weight in KG"><br />
+            <input type="number" id="feet" placeholder="Enter height (Feet)"><br />
+            <input type="number" id="inches" placeholder="Enter height (Inches)"><br />
+            <button onclick="calculateBMI()">Calculate BMI</button><br />
+            <button onclick="clearAll()">Clear</button><br />
+            <p class="result" id="result"></p>
+        </div>
+        <script src="{{ url_for('static', filename='css/js/script.js') }}"></script>
+    </body>
+    </html>
+</body>
+</html>
