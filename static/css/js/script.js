@@ -1,12 +1,14 @@
 function calculateBMI() {
-    let name = document.getElementById("name").value;
-    let weight = document.getElementById("weight").value;
-    let feet = document.getElementById("feet").value;
-    let inches = document.getElementById("inches").value;
+    let name = document.getElementById("name").value.trim();
+    let weight = document.getElementById("weight").value.trim();
+    let feet = document.getElementById("feet").value.trim();
+    let inches = document.getElementById("inches").value.trim();
 
     if (!name || !weight || !feet || !inches) {
-        document.getElementById("result").innerHTML = "Please fill in all fields!";
+        alert("Please fill in all fields!");
         return;
+        // document.getElementById("result").innerHTML = "Please fill in all fields!";
+        // return;
     }
 
     fetch('/calculate', {
@@ -23,6 +25,7 @@ function calculateBMI() {
     })
     .then(response => response.json())
     .then(data => {
+        document.getElementById("result").innerHTML = '';
         if (data.error) {
             document.getElementById("result").innerHTML = data.error;
         } else {
