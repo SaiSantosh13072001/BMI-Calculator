@@ -18,8 +18,10 @@
             <h2>BMI Calculator</h2>
             <input type="text" id="name" placeholder="Enter your name" required><br />
             <input type="number" id="weight" placeholder="Enter your weight in KG" required><br />
-            <input type="number" id="feet" placeholder="Enter height (Feet)" required><br />
-            <input type="number" id="inches" placeholder="Enter height (Inches)" required><br />
+            <div class="height-container">
+                <input type="number" id="feet" placeholder="Feet" required>
+                <input type="number" id="inches" placeholder="Inches" required>
+            </div>
             <button onclick="calculateBMI()">Calculate BMI</button><br />
             <button onclick="clearAll()">Clear</button><br />
             <p class="result" id="result"></p>

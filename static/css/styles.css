@@ -25,6 +25,14 @@ body {
     color: #0056b3;
     padding-bottom: 10px;
 }
+
+.height-container {
+    display: flex;
+}
+
+.height-container input {
+    width: 50%;
+}
 input, button {
     width: calc(100% - 20px);
     padding: 10px;
