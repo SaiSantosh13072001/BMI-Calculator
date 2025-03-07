@@ -7,8 +7,6 @@ function calculateBMI() {
     if (!name || !weight || !feet || !inches) {
         alert("Please fill in all fields!");
         return;
-        // document.getElementById("result").innerHTML = "Please fill in all fields!";
-        // return;
     }
 
     fetch('/calculate', {
