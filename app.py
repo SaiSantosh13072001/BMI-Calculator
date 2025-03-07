@@ -37,7 +37,11 @@ def calculate():
     inches = float(request.form['inches'])
     if(inches < 0 or inches >= 12):
         error = "Invalid input detected: Inches should be greater than or equal to 0 and less than 12."
-    
+    if(weight < 0):
+        error = "Invalid input detected: Weight should be greater than 0."
+    if(feet < 0 or feet >= 9):
+        error = "Invalid input detected: Feet should be greater than 0 and less than 9."
+        
     if(error is not None):
         return jsonify({'name': name, 'bmi': bmi, 'category': category, 'error': error})
          
